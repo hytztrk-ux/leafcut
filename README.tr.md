@@ -51,8 +51,7 @@ Linux'ta arayüzü derlemek için alışıldık X11/Wayland ve OpenGL geliştirm
 listesi [CONTRIBUTING.md](CONTRIBUTING.md#development-setup) dosyasında. Yalnızca komut satırı
 aracı için: `cargo install --path crates/leafcut-cli`.
 
-Linux, macOS ve Windows için hazır derlenmiş dosyalar, ilk sürüm etiketi gönderildiğinde bu deponun
-Releases sayfasında yer alacak.
+Linux, macOS ve Windows için hazır derlenmiş dosyalar [Releases sayfasında](https://github.com/hytztrk-ux/leafcut/releases).
 
 ## Neler yapar
 

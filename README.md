@@ -50,8 +50,7 @@ On Linux the GUI build needs the usual X11/Wayland and OpenGL development header
 [CONTRIBUTING.md](CONTRIBUTING.md#development-setup) for the package list. Only the
 command-line tool: `cargo install --path crates/leafcut-cli`.
 
-Prebuilt binaries for Linux, macOS and Windows will be on the Releases page of this repository
-once the first version tag is pushed.
+Prebuilt binaries for Linux, macOS and Windows are on the [Releases page](https://github.com/hytztrk-ux/leafcut/releases).
 
 ## What it does
 
