@@ -1,0 +1,25 @@
+[package]
+name = "leafcut-cli"
+description = "leafcut: a small, fully offline PDF toolkit for the command line (merge, split, rotate, compress, ...)."
+readme = "../../README.md"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[[bin]]
+name = "leafcut"
+path = "src/main.rs"
+
+[dependencies]
+leafcut-core = { workspace = true }
+clap = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+lopdf = { workspace = true }

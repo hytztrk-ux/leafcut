@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="240" viewBox="0 0 960 240" role="img" aria-labelledby="t d">
+  <title id="t">leafcut</title>
+  <desc id="d">leafcut: offline PDF toolkit. Merge, split, rotate and compress without uploading anything.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123b2c"/>
+      <stop offset="1" stop-color="#1d5a43"/>
+    </linearGradient>
+    <clipPath id="top"><polygon points="0,0 200,0 200,86 0,122"/></clipPath>
+    <clipPath id="bottom"><polygon points="0,132 200,96 200,240 0,240"/></clipPath>
+  </defs>
+  <rect width="960" height="240" rx="20" fill="url(#bg)"/>
+  <g transform="translate(64 36)">
+    <!-- the mark: a sheet with a folded corner, cut in two along a diagonal -->
+    <g clip-path="url(#top)" transform="translate(-4 -6)">
+      <path d="M20 4 H98 L134 40 V164 A6 6 0 0 1 128 170 H20 A6 6 0 0 1 14 164 V10 A6 6 0 0 1 20 4 Z" fill="#f4f1e8"/>
+      <path d="M98 4 V34 A6 6 0 0 0 104 40 H134 Z" fill="#c9d8c5"/>
+      <path d="M38 50 C60 30 98 34 108 56 C90 66 62 72 38 50 Z" fill="#3fa36f"/>
+      <path d="M38 50 C62 54 84 54 108 56" stroke="#1d5a43" stroke-width="2" fill="none"/>
+    </g>
+    <g clip-path="url(#bottom)" transform="translate(4 6)">
+      <path d="M20 4 H98 L134 40 V164 A6 6 0 0 1 128 170 H20 A6 6 0 0 1 14 164 V10 A6 6 0 0 1 20 4 Z" fill="#f4f1e8"/>
+      <rect x="34" y="118" width="82" height="7" rx="3.5" fill="#9fb8a6"/>
+      <rect x="34" y="134" width="64" height="7" rx="3.5" fill="#9fb8a6"/>
+      <rect x="34" y="150" width="74" height="7" rx="3.5" fill="#9fb8a6"/>
+    </g>
+  </g>
+  <text x="250" y="118" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="72" font-weight="700" fill="#f4f1e8" letter-spacing="-1">leafcut</text>
+  <text x="252" y="160" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#c9e3d2">Offline PDF toolkit for the desktop and the terminal.</text>
+  <text x="252" y="194" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" fill="#8fc2a3">Merge, split, rotate, compress. Nothing is uploaded.</text>
+</svg>

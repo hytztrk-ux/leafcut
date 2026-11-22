@@ -1,0 +1,14 @@
+/target/
+**/*.rs.bk
+*.pdb
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Scratch PDFs produced while trying the tools locally
+/scratch/
+*.leafcut-tmp

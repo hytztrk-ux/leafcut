@@ -1,0 +1,20 @@
+[package]
+name = "leafcut-core"
+description = "Offline PDF toolkit library: merge, split, rotate, reorder, compress and edit metadata of PDF files."
+readme = "../../README.md"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+lopdf = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

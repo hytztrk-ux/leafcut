@@ -1,0 +1,24 @@
+[package]
+name = "leafcut-gui"
+description = "leafcut: a small, fully offline PDF toolkit with a native desktop GUI."
+readme = "../../README.md"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+keywords.workspace = true
+categories = ["gui", "text-processing"]
+
+[[bin]]
+name = "leafcut-gui"
+path = "src/main.rs"
+
+[dependencies]
+leafcut-core = { workspace = true }
+eframe = { workspace = true, features = ["default_fonts", "glow", "wayland", "x11", "accesskit"] }
+egui = { workspace = true }
+rfd = { workspace = true, default-features = true }
+sys-locale = { workspace = true }
