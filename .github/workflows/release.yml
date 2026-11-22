@@ -3,11 +3,17 @@ name: Release
 on:
   push:
     tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to build and release, e.g. v0.1.0"
+        required: true
 
 permissions:
   contents: write
 
 env:
+  VERSION: ${{ inputs.tag || github.ref_name }}
   CARGO_TERM_COLOR: always
 
 jobs:
@@ -57,7 +63,7 @@ jobs:
         if: matrix.archive == 'tar.gz'
         shell: bash
         run: |
-          name="leafcut-${GITHUB_REF_NAME}-${{ matrix.target }}"
+          name="leafcut-${VERSION}-${{ matrix.target }}"
           mkdir "$name"
           cp target/${{ matrix.target }}/release/leafcut target/${{ matrix.target }}/release/leafcut-gui "$name"/
           cp README.md README.tr.md LICENSE CHANGELOG.md "$name"/
@@ -69,7 +75,7 @@ jobs:
         if: matrix.archive == 'zip'
         shell: pwsh
         run: |
-          $name = "leafcut-$env:GITHUB_REF_NAME-${{ matrix.target }}"
+          $name = "leafcut-$env:VERSION-${{ matrix.target }}"
           New-Item -ItemType Directory -Path $name | Out-Null
           Copy-Item target/${{ matrix.target }}/release/leafcut.exe, target/${{ matrix.target }}/release/leafcut-gui.exe $name
           Copy-Item README.md, README.tr.md, LICENSE, CHANGELOG.md $name
@@ -96,5 +102,7 @@ jobs:
           merge-multiple: true
       - uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ env.VERSION }}
+          target_commitish: ${{ github.sha }}
           files: dist/*
           generate_release_notes: true
